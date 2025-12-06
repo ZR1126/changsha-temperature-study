@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>长沙市气温动态可视化 | OWID 风格</title>
+  <!-- ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- ECharts GL（必须用于 bar3D） -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts-gl@2.1.1/dist/echarts-gl.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fff;
+    }
+    #main {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="main"></div>
+
+  <script>
+    const myChart = echarts.init(document.getElementById('main'));
+    myChart.showLoading();
+
+    // === 第一步：定义关键路径 ===
+    const TEMP_JSON_PATH = 'https://raw.githubusercontent.com/ZR1126/changsha-temperature-3d/main/data/hehe_temp_timeline.json';
+    const XIANGJIANG_GEOJSON_PATH = 'https://raw.githubusercontent.com/ZR1126/changsha-temperature-3d/main/data/xiangjiang.geo.json';
+    // 地区中心坐标（用于定位柱子）
+    const positions = {
+      '河东地区': [112.98, 28.19],  // 近似芙蓉区
+      '河西地区': [112.93, 28.18]   // 近似岳麓区
+    };
+
+    // OWID 配色方案
+    const COLORS = {
+      最高: '#e34a33',  // 深红色
+      平均: '#fdbb84',  // 黄橙色
+      最低: '#3182bd'   // 深蓝色
+    };
+
+    // 存储所有数据
+    let temperatureData = null;
+    let xiangjiangGeo = null;
+
+    // === 第二步：并行加载两个 JSON 文件 ===
+    Promise.all([
+      fetch(TEMP_JSON_PATH).then(res => res.json()),
+      fetch(XIANGJIANG_GEOJSON_PATH).then(res => res.json())
+    ])
+    .then(([tempJson, xjGeoJson]) => {
+      temperatureData = tempJson;
+      xiangjiangGeo = xjGeoJson;
+
+      // 提取年份（假设 tempJson 是 { "1974": { ... }, "1975": { ... } } 结构）
+      const years = Object.keys(temperatureData).map(Number).sort((a, b) => a - b);
+
+      // 注册一个虚拟的“长沙”地图用于定位
+      echarts.registerMap('changsha', {
+        features: [
+          { type: 'Feature', properties: { name: '河东地区' }, geometry: { type: 'Polygon', coordinates: [] } },
+          { type: 'Feature', properties: { name: '河西地区' }, geometry: { type: 'Polygon', coordinates: [] } }
+        ]
+      });
+
+      // 构建图表
+      buildOption(years);
+    })
+    .catch(err => {
+      console.error("数据加载失败:", err);
+      alert("无法加载数据，请检查路径是否正确，或使用本地服务器运行。");
+      myChart.hideLoading();
+    });
+
+    // === 第三步：构建主 Option ===
+    function buildOption(years) {
+      const option = {
+        baseOption: {
+          timeline: {
+            axisType: 'category',
+            autoPlay: false,
+            playInterval: 1000,
+            data: years,
+            label: {
+              formatter: year => `${year}年`
+            },
+            left: '10%',
+            right: '10%',
+            bottom: 20,
+            width: '80%',
+            height: 40,
+            lineStyle: { color: '#ccc' },
+            itemStyle: { color: '#555' },
+            checkpointStyle: { color: '#555', borderColor: '#555' },
+            controlStyle: { showPlayBtn: true, color: '#555', borderColor: '#555' }
+          },
+          title: {
+            text: '长沙市河东与河西地区气温变化',
+            subtext: '数据来源：湖南省气象局',
+            left: 'center',
+            textStyle: {
+              fontSize: 20,
+              fontFamily: 'Helvetica Neue, Arial, sans-serif'
+            },
+            subtextStyle: {
+              fontSize: 12,
+              color: '#666'
+            }
+          },
+          tooltip: {
+            formatter: function(params) {
+              const d = params.value;
+              if (!Array.isArray(d[2])) return '';
+              const [最高, 平均, 最低] = d[2];
+              return `${params.seriesName}<br/>
+                      年平均最高气温: ${最高}℃<br/>
+                      年均温: ${平均}℃<br/>
+                      年平均最低气温: ${最低}℃`;
+            }
+          },
+          geo: {
+            map: 'changsha',
+            roam: true,
+            aspectScale: 0.75,
+            itemStyle: {
+              areaColor: '#f0f0f0',
+              borderColor: '#ddd',
+              borderWidth: 0.5
+            },
+            emphasis: {
+              itemStyle: {
+                areaColor: '#eee'
+              }
+            }
+          },
+          series: []
+        },
+        options: []
+      };
+
+      // 获取湘江路径坐标
+      const xiangjiangCoords = extractCoordsFromGeo(xiangjiangGeo);
+
+      // 基础系列：湘江（静态）
+      const baseSeries = [
+        {
+          name: '湘江',
+          type: 'lines',
+          coordinateSystem: 'geo',
+          data: [{ coords: xiangjiangCoords }],
+          lineStyle: {
+            color: '#6baed6',
+            width: 3,
+            opacity: 0.9
+          },
+          effect: {
+            show: false
+          },
+          zlevel: -10
+        }
+      ];
+
+      // 为每一年生成数据
+      years.forEach(year => {
+        const yearSeries = [...baseSeries]; // 包含湘江
+        const dataByRegion = temperatureData[year];
+
+        // 为每个地区添加三根柱子（最高、平均、最低）
+        Object.keys(dataByRegion).forEach(region => {
+          const pos = positions[region];
+          const t = dataByRegion[region];
+
+          // 三个温度值
+          const heights = {
+            最高: t['年平均最高气温'],
+            平均: t['年均温'],
+            最低: t['年平均最低气温']
+          };
+
+          // 分别添加三种柱子（不同偏移避免重叠）
+          const offset = {
+            '最高': [-0.02, 0],
+            '平均': [0, 0],
+            '最低': [0.02, 0]
+          };
+
+          Object.keys(heights).forEach(key => {
+            const [dx, dy] = offset[key];
+            const lng = pos[0] + dx;
+            const lat = pos[1] + dy;
+            const value = heights[key];
+
+            yearSeries.push({
+              name: `${region}-${key}`,
+              type: 'bar3D',
+              coordinateSystem: 'geo',
+              data: [{
+                value: [lng, lat, [value]], // [lng, lat, [height]]
+                itemStyle: {
+                  color: COLORS[key]
+                }
+              }],
+              barSize: 0.015,     // 柱子宽度（经纬度单位）
+              minHeight: 0.001,
+              shading: 'lambert',
+              label: { show: false },
+              emphasis: {
+                label: {
+                  show: true,
+                  formatter: '{c}℃',
+                  position: 'top'
+                }
+              }
+            });
+          });
+        });
+
+        option.options.push({
+          title: {
+            subtext: `年份：${year}`
+          },
+          series: yearSeries
+        });
+      });
+
+      // 渲染图表
+      myChart.hideLoading();
+      myChart.setOption(option);
+    }
+
+    // === 辅助函数：从 GeoJSON 提取 LineString 坐标 ===
+    function extractCoordsFromGeo(geojson) {
+      const coords = [];
+      function traverse(obj) {
+        if (obj.type === 'FeatureCollection') {
+          obj.features.forEach(traverse);
+        } else if (obj.type === 'Feature') {
+          if (obj.geometry?.type === 'LineString') {
+            coords.push(...obj.geometry.coordinates);
+          } else if (obj.geometry?.type === 'MultiLineString') {
+            obj.geometry.coordinates.forEach(line => coords.push(...line));
+          }
+        }
+      }
+      traverse(geojson);
+      return coords.length > 0 ? coords : [
+        [112.85, 28.25], [112.90, 28.20], [112.95, 28.15], [113.00, 28.10]
+      ]; // 默认值
+    }
+
+    // 窗口自适应
+    window.addEventListener('resize', () => myChart.resize());
+  </script>
+</body>
+</html>

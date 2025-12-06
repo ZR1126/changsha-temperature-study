@@ -1,0 +1,869 @@
+[
+  {
+    "year": 1974,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.49,
+        "avgTemp": 17.67,
+        "minTemp": 14.38
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.46,
+        "avgTemp": 17.6,
+        "minTemp": 14.22
+      }
+    ]
+  },
+  {
+    "year": 1975,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.17,
+        "avgTemp": 17.77,
+        "minTemp": 14.79
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.13,
+        "avgTemp": 17.69,
+        "minTemp": 14.64
+      }
+    ]
+  },
+  {
+    "year": 1976,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.03,
+        "avgTemp": 17.36,
+        "minTemp": 14.12
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 20.96,
+        "avgTemp": 17.26,
+        "minTemp": 13.93
+      }
+    ]
+  },
+  {
+    "year": 1977,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.22,
+        "avgTemp": 17.6,
+        "minTemp": 14.38
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.22,
+        "avgTemp": 17.56,
+        "minTemp": 14.25
+      }
+    ]
+  },
+  {
+    "year": 1978,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.27,
+        "avgTemp": 18.12,
+        "minTemp": 14.51
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.17,
+        "avgTemp": 18.02,
+        "minTemp": 14.35
+      }
+    ]
+  },
+  {
+    "year": 1979,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.44,
+        "avgTemp": 18.15,
+        "minTemp": 14.2
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.42,
+        "avgTemp": 18.09,
+        "minTemp": 14.05
+      }
+    ]
+  },
+  {
+    "year": 1980,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.2,
+        "avgTemp": 17.56,
+        "minTemp": 14.36
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.16,
+        "avgTemp": 17.49,
+        "minTemp": 14.2
+      }
+    ]
+  },
+  {
+    "year": 1981,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.58,
+        "avgTemp": 17.89,
+        "minTemp": 14.68
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.49,
+        "avgTemp": 17.78,
+        "minTemp": 14.48
+      }
+    ]
+  },
+  {
+    "year": 1982,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.12,
+        "avgTemp": 17.61,
+        "minTemp": 14.57
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.06,
+        "avgTemp": 17.52,
+        "minTemp": 14.4
+      }
+    ]
+  },
+  {
+    "year": 1983,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.9,
+        "avgTemp": 18.12,
+        "minTemp": 14.85
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.82,
+        "avgTemp": 18.0,
+        "minTemp": 14.65
+      }
+    ]
+  },
+  {
+    "year": 1984,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 20.75,
+        "avgTemp": 17.2,
+        "minTemp": 14.1
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 20.71,
+        "avgTemp": 17.11,
+        "minTemp": 13.95
+      }
+    ]
+  },
+  {
+    "year": 1985,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.46,
+        "avgTemp": 17.76,
+        "minTemp": 14.48
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.36,
+        "avgTemp": 17.63,
+        "minTemp": 14.29
+      }
+    ]
+  },
+  {
+    "year": 1986,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.81,
+        "avgTemp": 17.9,
+        "minTemp": 14.41
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.75,
+        "avgTemp": 17.78,
+        "minTemp": 14.23
+      }
+    ]
+  },
+  {
+    "year": 1987,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.85,
+        "avgTemp": 18.06,
+        "minTemp": 14.79
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.78,
+        "avgTemp": 17.96,
+        "minTemp": 14.62
+      }
+    ]
+  },
+  {
+    "year": 1988,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.53,
+        "avgTemp": 17.78,
+        "minTemp": 14.58
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.52,
+        "avgTemp": 17.73,
+        "minTemp": 14.43
+      }
+    ]
+  },
+  {
+    "year": 1989,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 20.7,
+        "avgTemp": 17.39,
+        "minTemp": 14.52
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 20.68,
+        "avgTemp": 17.32,
+        "minTemp": 14.35
+      }
+    ]
+  },
+  {
+    "year": 1990,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.68,
+        "avgTemp": 18.13,
+        "minTemp": 15.04
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.66,
+        "avgTemp": 18.08,
+        "minTemp": 14.92
+      }
+    ]
+  },
+  {
+    "year": 1991,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.29,
+        "avgTemp": 17.76,
+        "minTemp": 14.73
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.21,
+        "avgTemp": 17.67,
+        "minTemp": 14.56
+      }
+    ]
+  },
+  {
+    "year": 1992,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.08,
+        "avgTemp": 18.12,
+        "minTemp": 14.64
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.99,
+        "avgTemp": 18.02,
+        "minTemp": 14.44
+      }
+    ]
+  },
+  {
+    "year": 1993,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.14,
+        "avgTemp": 17.38,
+        "minTemp": 14.22
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.13,
+        "avgTemp": 17.36,
+        "minTemp": 14.1
+      }
+    ]
+  },
+  {
+    "year": 1994,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.51,
+        "avgTemp": 18.07,
+        "minTemp": 15.13
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.51,
+        "avgTemp": 18.04,
+        "minTemp": 15.02
+      }
+    ]
+  },
+  {
+    "year": 1995,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.07,
+        "avgTemp": 18.34,
+        "minTemp": 15.09
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.0,
+        "avgTemp": 18.24,
+        "minTemp": 14.89
+      }
+    ]
+  },
+  {
+    "year": 1996,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.44,
+        "avgTemp": 17.78,
+        "minTemp": 14.54
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.42,
+        "avgTemp": 17.72,
+        "minTemp": 14.36
+      }
+    ]
+  },
+  {
+    "year": 1997,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.48,
+        "avgTemp": 18.03,
+        "minTemp": 15.01
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.45,
+        "avgTemp": 17.98,
+        "minTemp": 14.9
+      }
+    ]
+  },
+  {
+    "year": 1998,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.72,
+        "avgTemp": 19.04,
+        "minTemp": 15.76
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.66,
+        "avgTemp": 18.94,
+        "minTemp": 15.62
+      }
+    ]
+  },
+  {
+    "year": 1999,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.98,
+        "avgTemp": 18.3,
+        "minTemp": 15.13
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.95,
+        "avgTemp": 18.26,
+        "minTemp": 15.02
+      }
+    ]
+  },
+  {
+    "year": 2000,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.33,
+        "avgTemp": 18.0,
+        "minTemp": 15.03
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.31,
+        "avgTemp": 17.95,
+        "minTemp": 14.91
+      }
+    ]
+  },
+  {
+    "year": 2001,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.28,
+        "avgTemp": 18.55,
+        "minTemp": 15.25
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.23,
+        "avgTemp": 18.47,
+        "minTemp": 15.08
+      }
+    ]
+  },
+  {
+    "year": 2002,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.03,
+        "avgTemp": 18.48,
+        "minTemp": 15.34
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.04,
+        "avgTemp": 18.46,
+        "minTemp": 15.24
+      }
+    ]
+  },
+  {
+    "year": 2003,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.15,
+        "avgTemp": 18.35,
+        "minTemp": 14.93
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.11,
+        "avgTemp": 18.28,
+        "minTemp": 14.79
+      }
+    ]
+  },
+  {
+    "year": 2004,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 23.02,
+        "avgTemp": 18.86,
+        "minTemp": 15.29
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.89,
+        "avgTemp": 18.72,
+        "minTemp": 15.05
+      }
+    ]
+  },
+  {
+    "year": 2005,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.88,
+        "avgTemp": 18.37,
+        "minTemp": 15.19
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.82,
+        "avgTemp": 18.26,
+        "minTemp": 15.03
+      }
+    ]
+  },
+  {
+    "year": 2006,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.77,
+        "avgTemp": 19.04,
+        "minTemp": 15.85
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.63,
+        "avgTemp": 18.87,
+        "minTemp": 15.6
+      }
+    ]
+  },
+  {
+    "year": 2007,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 23.05,
+        "avgTemp": 19.16,
+        "minTemp": 15.84
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.95,
+        "avgTemp": 19.03,
+        "minTemp": 15.61
+      }
+    ]
+  },
+  {
+    "year": 2008,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.71,
+        "avgTemp": 18.8,
+        "minTemp": 15.39
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.74,
+        "avgTemp": 18.76,
+        "minTemp": 15.26
+      }
+    ]
+  },
+  {
+    "year": 2009,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.43,
+        "avgTemp": 18.72,
+        "minTemp": 15.55
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.43,
+        "avgTemp": 18.66,
+        "minTemp": 15.38
+      }
+    ]
+  },
+  {
+    "year": 2010,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.43,
+        "avgTemp": 18.55,
+        "minTemp": 15.33
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.38,
+        "avgTemp": 18.48,
+        "minTemp": 15.17
+      }
+    ]
+  },
+  {
+    "year": 2011,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.97,
+        "avgTemp": 18.16,
+        "minTemp": 14.84
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.98,
+        "avgTemp": 18.13,
+        "minTemp": 14.7
+      }
+    ]
+  },
+  {
+    "year": 2012,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.23,
+        "avgTemp": 17.9,
+        "minTemp": 15.0
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.2,
+        "avgTemp": 17.83,
+        "minTemp": 14.84
+      }
+    ]
+  },
+  {
+    "year": 2013,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 23.81,
+        "avgTemp": 19.54,
+        "minTemp": 15.93
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 23.55,
+        "avgTemp": 19.27,
+        "minTemp": 15.61
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.53,
+        "avgTemp": 18.73,
+        "minTemp": 15.57
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.37,
+        "avgTemp": 18.58,
+        "minTemp": 15.34
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 21.89,
+        "avgTemp": 18.49,
+        "minTemp": 15.55
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 21.89,
+        "avgTemp": 18.44,
+        "minTemp": 15.41
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.07,
+        "avgTemp": 18.54,
+        "minTemp": 15.48
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.06,
+        "avgTemp": 18.5,
+        "minTemp": 15.34
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.28,
+        "avgTemp": 18.68,
+        "minTemp": 15.49
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.28,
+        "avgTemp": 18.63,
+        "minTemp": 15.37
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.58,
+        "avgTemp": 18.81,
+        "minTemp": 15.59
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.59,
+        "avgTemp": 18.76,
+        "minTemp": 15.48
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.47,
+        "avgTemp": 18.64,
+        "minTemp": 15.39
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.44,
+        "avgTemp": 18.6,
+        "minTemp": 15.25
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 22.15,
+        "avgTemp": 18.66,
+        "minTemp": 15.68
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 22.08,
+        "avgTemp": 18.58,
+        "minTemp": 15.54
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 23.22,
+        "avgTemp": 19.38,
+        "minTemp": 16.11
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 23.15,
+        "avgTemp": 19.28,
+        "minTemp": 15.91
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 23.13,
+        "avgTemp": 19.37,
+        "minTemp": 16.07
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 23.1,
+        "avgTemp": 19.3,
+        "minTemp": 15.9
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 23.38,
+        "avgTemp": 19.43,
+        "minTemp": 16.03
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 23.27,
+        "avgTemp": 19.32,
+        "minTemp": 15.87
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "data": [
+      {
+        "name": "河东地区",
+        "maxTemp": 23.38,
+        "avgTemp": 19.72,
+        "minTemp": 16.63
+      },
+      {
+        "name": "河西地区",
+        "maxTemp": 23.32,
+        "avgTemp": 19.62,
+        "minTemp": 16.43
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "湘江" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [112.93, 28.3],   // 北端
+          [112.95, 28.2],
+          [112.96, 28.1],
+          [112.97, 28.0]    // 南端
+        ]
+      }
+    }
+  ]
+}
